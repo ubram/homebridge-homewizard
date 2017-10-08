@@ -7,6 +7,7 @@ import {HomeWizardSomfyShutter} from './accessories/somfy-shutter';
 import {HomeWizardPhilipsHue} from './accessories/philips-hue';
 import {HomeWizardRadiatorValve} from './accessories/radiator-valve';
 import {HomeWizardSmokeSensor} from './accessories/smoke-sensor';
+import {HomeWizardWaterSensor} from './accessories/water-sensor';
 import {HomeWizardContactSensor} from './accessories/contact-sensor';
 import {HomeWizardDoorbell} from './accessories/doorbell';
 import {HomeWizardHeatLink} from './accessories/heatlink';
@@ -86,6 +87,9 @@ export class AccessoriesFactory {
           break;
         case 'smoke868':
           this._instantiateAccessory(HomeWizardSmokeSensor, kakusensor);
+          break;
+        case 'leakage':
+          this._instantiateAccessory(HomeWizardWaterSensor, kakusensor);
           break;
         case 'contact':
           this._instantiateAccessory(HomeWizardContactSensor, kakusensor);
